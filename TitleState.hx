@@ -112,6 +112,11 @@ function create() {
     splash.scale.set(0.54, 0.54);
 }
 
+function postCreate() {
+    addVirtualPad('NONE', 'A');
+	addVirtualPadCamera();
+}
+
 function stepHit(curStep) {
     steps = curStep;
 } 
