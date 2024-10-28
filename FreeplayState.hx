@@ -64,8 +64,11 @@ function swapChar(?set) {
 }
 
 function postCreate() {
- 
-	canSelect = false;
+
+	addVirtualPad('NONE', 'A');
+	addVirtualPadCamera();
+
+        canSelect = false;
 	FlxG.cameras.add(textCamera = new FlxCamera(), false);
 	textCamera.bgColor = FlxColor.TRANSPARENT;
 	FlxG.cameras.add(picoTextCamera = new FlxCamera(), false);
