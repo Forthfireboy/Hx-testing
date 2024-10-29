@@ -125,6 +125,7 @@ function update(elapsed) {
 				if (canOpenLink) {
 					_progressBindText.text = 'Link prevented, you can press [ACCEPT] to continue when done.';
 					canOpenLink = false; // prevent after asked to stop
+					addVirtualPad('NONE', 'NONE');
 				}
 			}
 		}
@@ -133,6 +134,7 @@ function update(elapsed) {
 				CoolUtil.openURL(curLink);
 				canOpenLink = false; // only allow once
 				_progressBindText.text = 'Link opened, you can press [ACCEPT] to continue when done.';
+				addVirtualPad('NONE', 'NONE');
 			} else {
 				if (finishedLoading)
 					canExit = true;
